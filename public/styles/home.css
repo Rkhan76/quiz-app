@@ -1,0 +1,62 @@
+main{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow:  0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius: 5px;
+}
+.image-container{
+    height: 80%;
+    flex: 1;
+}
+img{
+    width: 200px; 
+    height: 200px;
+}
+.selection-container{
+    margin-left: 5px;
+    flex: 2;
+    margin-right: 20px;
+}
+
+.selection-container form{
+    font-size: 0.9rem;
+}
+
+hr{
+    border: 0;
+    height: 0.5px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+#category,#quantity,#difficulty,#hour,#minute,#seconds{
+    height: 40px;
+    color: #403f3f;
+    font-size: 1rem;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 5px;
+}
+
+.level-category,select{
+    display: block;
+    margin: 10px 0;
+}
+select{
+    width: 100%;
+}
+.countdown{
+    display: block;
+}
+#hour,#minute,#seconds{
+    display: inline;
+}
+
+

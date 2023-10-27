@@ -1,0 +1,61 @@
+<%- include("public/header.ejs") %>
+    <main>
+        <div class="main-container">
+            <div class="image-container">
+                <img src="/ai-brain.svg" alt="brain-image">
+            </div>
+            <div class="selection-container">
+                <h1>The Ultimate Trivia Quiz</h1>
+                <hr>
+                <form action="/submit" method="post">
+                    <label class="level-category" for="category">In which category do you want to play the quiz?</label>
+                    <select name="category" id="category">
+                        <option value="AnyCategory">Any Category</option>
+                        <option value="DAA">DAA</option>
+                        <option value="DSA">DSA</option>
+                        <option value="Maths">Mathsmatics</option>
+                        <option value="DBMS">DBMS</option>
+                    </select>
+                    <label for="quantity">How many questions do you want in your quiz?</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label for="difficulty">How difficult do you want your quiz to be?</label>
+                    <select name="difficulty" id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <label class="countdown" for="countdown">Please select the countdown time for your quiz.</label>
+                    <select name="hour" id="hour">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="minute" id="minute">
+                        <% for (let i=0; i < 60; i++) { %>
+                            <option value="<%= i %>">
+                                <%= i %>
+                            </option>
+                            <% } %>
+                    </select>
+                    <select name="seconds" id="seconds">
+                        <% for (let i=0; i < 60; i++) { %>
+                            <option value="<%= i %>">
+                                <%= i %>
+                            </option>
+                            <% } %>
+                    </select>
+                    <hr>
+                    <button type="submit">Start</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    </body>
+
+    </html>
