@@ -6,17 +6,29 @@ main{
 }
 .main-container{
     width: 70%;
-    height: 70vh;
+    /* height: 70vh; */
     display: flex;
     border: 1px solid rgba(34,36,38,.15);
     box-shadow:  0 1px 2px 0 rgba(34,36,38,.15);
     border-radius: 5px;
 }
+
+@media (max-width:770px){
+    .main-container{
+        width: 100%;
+    }
+}
+
+@media (min-width: 765px){
+    .main-container{
+        /* display:none; */
+    }
+}
 .image-container{
-    height: 80%;
-    flex: 1;
+    /* height: 80%; */
 }
 img{
+    margin-top: 15px;
     width: 200px; 
     height: 200px;
 }
@@ -43,6 +55,7 @@ hr{
     font-size: 1rem;
     border: 1px solid rgba(34,36,38,.15);
     border-radius: 5px;
+    padding-left: 10px;
 }
 
 .level-category,select{
@@ -55,8 +68,22 @@ select{
 .countdown{
     display: block;
 }
-#hour,#minute,#seconds{
-    display: inline;
+
+.hour-min-sec-boxes{
+    display: flex;
+    gap: 10px;
+    width: 50%;
 }
+
+.start-button{
+    padding: 10px 50px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: #00bfbc;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
 
 
